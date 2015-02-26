@@ -1,0 +1,16 @@
+{
+  "name": "backbone-react-table",
+  "version": "0.0.0",
+  "description": "Table built using React + Backbone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backbone",
+    "react",
+    "table"
+  ],
+  "author": "Dennis Heckman",
+  "license": "ISC"
+}
