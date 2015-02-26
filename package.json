@@ -6,11 +6,6 @@
   "engines": {
     "node": ">=0.10"
   },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
-  },
   "keywords": [
     "backbone",
     "react"
@@ -27,7 +22,6 @@
     "underscore": "^1.8.2"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "reactify": "^1.0.0"
+    "react-tools": "^0.12.2"
   }
 }
