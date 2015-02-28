@@ -23,11 +23,21 @@ var Table = React.createClass({
             return column;
         });
 
-        var tableRows = collection.map(function (model) {
+        var defaultRowRender = function (model) {
             return (
                 <TableRow key={model.id} model={model} columns={columns} />
             );
-        });
+        };
+
+        var tableRowMap = function (model) {
+            if (_(options.rows.render).isFunction()) {
+                return options.rows.render(model, columns, defaultRowRender);
+            }
+
+            return defaultRowRender(model);
+        };
+
+        var tableRows = collection.map(tableRowMap);
 
         var headerRow = columns.map(function (column) {
             var renderColumn = column.render;
@@ -102,6 +112,7 @@ var TableRow = React.createClass({
     render: function () {
         var model = this.getModel();
         var columns = this.props.columns;
+        var className = this.props.className;
 
         var tableCells = columns.map(function (column) {
             var renderColumn = column.render;
@@ -119,7 +130,7 @@ var TableRow = React.createClass({
         });
 
         return (
-            <tr>{tableCells}</tr>
+            <tr className={className}>{tableCells}</tr>
         );
     }
 });
@@ -195,5 +206,7 @@ var ShowCount = React.createClass({
     }
 });
 
-
-module.exports = Table;
+module.exports = {
+    Table: Table,
+    TableRow: TableRow
+};
