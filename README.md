@@ -8,9 +8,12 @@
 
 ## Changelog
 
+### 0.2.1
+fix bug with column sorting
+
 ### 0.2.0
 Add support for regular Backbone collections and Backbone Paginator collections
-Refactor to use Strategy Pattern for different collection types 
+Refactor to use Strategy Pattern for different collection types
 Refactor option parser into function separate from React class
 Simplify sort
 Remove dependency on JSX
@@ -24,4 +27,3 @@ Custom column render method
 Pagination
 Item counter
 Number of rows shown picker
-
