@@ -1,10 +1,13 @@
 ## TODO:
-* Column picker
+* Column picker Component
 * Do I really need React keys?
 * Automatically Headerize column names into labels by default
-* tests
+* Tests
 * React Table should save user preferences in a cookie per table
 * ES6
+* Editable?
+* TableRow should accept child column prefixes (TableData, TableDatum, ...)
+* Way to slow! Possibly BackboneReactComponents fault
 
 ## Changelog
 
