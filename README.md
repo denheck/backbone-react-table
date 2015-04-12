@@ -11,6 +11,11 @@
 
 ## Changelog
 
+### 1.0.0
+refactored into multiple composable components instead of one Table component
+changed interface to be more idiomatic React
+removed Backbone React Component from TableRow component
+
 ### 0.2.1
 fix bug with column sorting
 
